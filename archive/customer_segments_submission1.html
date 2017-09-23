@@ -21794,78 +21794,13 @@ IiIiIpI6CoRERERERCR1FAiJiIiIiEjqKBASEREREZHU+f8Bq0JIhlvHJCkAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p>A customer who is assigned to Cluster 1 should best identify with retailers, as they require more groceries than any other category (34% of their spending is on groceries), and proportionately fewer fresh ingredients (only 21% of their spending is on fresh). As identified in the table below.</p>
+<li><p>A customer who is assigned to Cluster 1 should best identify with retailers, as they require more groceries than any other category, and proportionately fewer fresh ingredients.</p>
 </li>
-<li><p>A customer who is assigned to Cluster 2 should best identify with restaurants, as they require far more fresh ingredients than groceries, proportionately. Segment 2 has more than half of its spending on fresh ingredients (56.75%), and only 14% of its spending on Groceries.</p>
+<li><p>A customer who is assigned to Cluster 2 should best identify with restaurants, as they require far more fresh ingredients than groceries, proportionately.</p>
 </li>
-<li><p>A customer who is assigned to Cluster 0 is a bit unclear--perhaps it would have been best to remove outliers earlier in this process. As is, segment 0 is most similar to segment 1 in terms of its proportional breakdown of spending, it just spends significanly less (9,856 total instead of 27,581 for segment 1, roughly one third of the spending). Perhaps this segment simply represents smaller scaled versions of the institutions represented above.</p>
+<li><p>A customer who is assigned to Cluster 0 is a bit unclear--perhaps it would have been best to remove outliers earlier in this process. Perhaps this segment simply represents smaller scaled versions of the institutions represented above.</p>
 </li>
 </ul>
-<table>
-<thead><tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>Seg 0</td>
-<td>Seg 1</td>
-<td>Seg 2</td>
-</tr>
-<tr>
-<td>Fresh</td>
-<td>25.30%</td>
-<td>21.72%</td>
-<td>56.74%</td>
-</tr>
-<tr>
-<td>Milk</td>
-<td>22.53%</td>
-<td>23.84%</td>
-<td>11.09%</td>
-</tr>
-<tr>
-<td>Grocery</td>
-<td>34.54%</td>
-<td>34.90%</td>
-<td>13.56%</td>
-</tr>
-<tr>
-<td>Frozen</td>
-<td>8.06%</td>
-<td>4.87%</td>
-<td>12.81%</td>
-</tr>
-<tr>
-<td>Detergents</td>
-<td>6.01%</td>
-<td>10.39%</td>
-<td>1.64%</td>
-</tr>
-<tr>
-<td>Deli</td>
-<td>3.56%</td>
-<td>4.28%</td>
-<td>4.16%</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>TOTAL SPENDING</strong></td>
-<td><strong>9856.0</strong></td>
-<td><strong>27581.0</strong></td>
-<td><strong>17349.0 </strong></td>
-</tr>
-</tbody>
-</table>
 
 </div>
 </div>
@@ -21918,17 +21853,6 @@ Sample point 2 predicted to be in Cluster 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>PREDICTIONS: 
-(NOTE: Given that segment 0 is questionable and could be removed by removing outliers, I have removed it from consideration in the following question)</p>
-<ul>
-<li>As noted in question 1, sample point 0 spends 70% of its budget on fresh ingredients, and less than 1% of its spending on frozen, detergents, and deli. This is most similar to segment * Sample point 1 is a little less clear, as it spends a high proportion of its spending (62%) on fresh ingredients like segment 2, but also spends a 22% on detergents/papers, a very high proportion compared to how much is typically spent in this category, making it more like segment 1 in this instance. This could go either way.</li>
-<li>Sample point 2 spends very little (5% of its spending) on fresh ingredients, making it more likely to fit into segment 1 than segment 2. </li>
-</ul>
-<p>RUNNING THE CODE:</p>
-<ul>
-<li>These predictions match the results indicated by running the code above. It seems that sample point 1 is predicted to be in cluster 1, but I suspect that it will be somewhere on the boundary, as it has less of the defining characteristics of either of the other two categories. </li>
-</ul>
-<p>RESULTS:</p>
 <ul>
 <li>Sample points 1 and 2 are in the retailers and restaurants clusters, respecitvely, which makes sense because their data fits for each of those clusters. Because the data for cluster is a bit more disprate, the sample point ends up actually being in cluster 1, which is for retailers. </li>
 </ul>
@@ -21973,7 +21897,6 @@ Sample point 2 predicted to be in Cluster 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>No, we cannot assume that change affects all customers equally. Frozen foods and paper goods can accommdate larger fluxuations in schedule, but fresh ingredients (and milk, to some extent) are likely desired to be delivered each day to maintain freshness. It follows, then, that customers with a higher reliance on fresh ingredients (and milk) are more likely to be affected by the schedule change than those who have a lower proportion of fresh ingredients.</p>
-<p>To run A/B testing, therefore, it might be best to run two tests. That is one treatment and one control group for each of the two Customer Segments ID'd in question 8 (and eliminating segment 0, for the reasons indicated in that question). For both the segment 1 and segment 2 control groups, the schedule could remain the same. For both the segment 1 and segment 2 experimental group, the schedule could be changed. Or, the control groups could be data from before the switch, and the experimental data could come from after the switch. In either case, it is key that data only be compared between similar customer segments, and not mixing data from the two segments, which already have different data from eachother based on different variables.</p>
 
 </div>
 </div>
